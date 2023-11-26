@@ -20,6 +20,10 @@ public class Movement : MonoBehaviour
     public KeyCode jumpKey = KeyCode.Space;
     public KeyCode sprintKey = KeyCode.LeftShift;
 
+    [Header("Allowed Movement")]
+    public bool jump = true;
+    public bool walk = true;
+
     float xRotation;
     float yRotation;
     float horizontalInput;
@@ -38,8 +42,11 @@ public class Movement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        rb = GetComponent<Rigidbody>();
-        rb.freezeRotation = true;
+        if (walk || jump)
+        {
+            rb = GetComponent<Rigidbody>();
+            rb.freezeRotation = true;
+        }
     }
 
     // Update is called once per frame
@@ -58,13 +65,15 @@ public class Movement : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, yRotation, 0);
 
         //Movement
-        MovementInput();
-        SpeedControl();
-
-        if (grounded)
-            rb.drag = groundDrag;
-        else
-            rb.drag = 0;
+        if (walk ||jump)
+        {
+            MovementInput();
+            SpeedControl();
+            if (grounded)
+                rb.drag = groundDrag;
+            else
+                rb.drag = 0;
+        }
     }
 
     private void FixedUpdate()
@@ -74,12 +83,15 @@ public class Movement : MonoBehaviour
 
     void MovementInput()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
+        if (walk)
+        {
+            horizontalInput = Input.GetAxisRaw("Horizontal");
+            verticalInput = Input.GetAxisRaw("Vertical");
 
-        sprinting = Input.GetKey(sprintKey);
+            sprinting = Input.GetKey(sprintKey);
+        }
 
-        if (Input.GetKey(jumpKey) && readyToJump && grounded)
+        if (Input.GetKey(jumpKey) && readyToJump && grounded && jump)
         {
             readyToJump = false;
 

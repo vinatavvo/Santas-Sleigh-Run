@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FollowWaypoint : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class FollowWaypoint : MonoBehaviour
 
     public float sideMovement = 0f;
     public Transform sled;
+    public Slider progress;
 
     List<Transform> waypoints = new List<Transform>();
     bool finished = false;
@@ -33,6 +35,7 @@ public class FollowWaypoint : MonoBehaviour
     {
         if (!finished)
         {
+            progress.value = Mathf.Max(currentWaypoint - 1, 0) / (float)waypoints.Count;
             if (Vector3.Distance(transform.position, waypoints[currentWaypoint].position) < 3)
             {
                 distToNext = Vector3.Distance(transform.position, waypoints[currentWaypoint].position);
@@ -50,8 +53,7 @@ public class FollowWaypoint : MonoBehaviour
             transform.Translate(0, 0, speed * Time.deltaTime);
 
             float h = sideMovement * Input.GetAxis("Horizontal");
-            Debug.Log(h);
-            sled.Translate(h * Time.deltaTime, 0, 0);
+            sled.localPosition = new Vector3(Mathf.Clamp(sled.localPosition.x + (h * Time.deltaTime), -7f, 7f), 0, 0);
         }
     }
 }
