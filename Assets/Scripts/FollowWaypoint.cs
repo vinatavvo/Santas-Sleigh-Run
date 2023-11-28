@@ -44,7 +44,8 @@ public class FollowWaypoint : MonoBehaviour
     {
         if (!finished && !lost)
         {
-            progress.value = Mathf.Max(currentWaypoint - 1, 0) / (float)waypoints.Count;
+            if (progress != null)
+                progress.value = Mathf.Max(currentWaypoint - 1, 0) / (float)waypoints.Count;
             if (Vector3.Distance(transform.position, waypoints[currentWaypoint].position) < 3)
             {
                 distToNext = Vector3.Distance(transform.position, waypoints[currentWaypoint].position);
@@ -61,8 +62,11 @@ public class FollowWaypoint : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, lookatWP, rotSpeed * Time.deltaTime);
             transform.Translate(0, 0, speed * Time.deltaTime);
 
-            float h = sideMovement * Input.GetAxis("Horizontal");
-            sled.localPosition = new Vector3(Mathf.Clamp(sled.localPosition.x + (h * Time.deltaTime), -maxHorizontalDisplacement, maxHorizontalDisplacement), 0, 0);
+            if (sideMovement != 0 && sled != null)
+            {
+                float h = sideMovement * Input.GetAxis("Horizontal");
+                sled.localPosition = new Vector3(Mathf.Clamp(sled.localPosition.x + (h * Time.deltaTime), -maxHorizontalDisplacement, maxHorizontalDisplacement), 0, 0);
+            }
         }
         ManageUI();
     }
