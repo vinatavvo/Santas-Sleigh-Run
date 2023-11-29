@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class FollowWaypoint : MonoBehaviour
 {
@@ -19,14 +20,26 @@ public class FollowWaypoint : MonoBehaviour
 
     [Header("Gameplay Settings")]
     public Slider progress;
+    public GameObject startScene;
     public GameObject winScene;
     public GameObject UI;
     public GameObject loseScene;
+    bool started = false;
+
+    [Header("Score Win Settings")]
+    public bool finishByScore = false;
+    public float goal = 20f;
+    public TMP_Text scoreDisp;
+    private float score = 0f;
 
     List<Transform> waypoints = new List<Transform>();
     bool finished = false;
     bool lost = false;
     float distToNext;
+    Movement movementHandler;
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -36,13 +49,13 @@ public class FollowWaypoint : MonoBehaviour
             waypoints.Add(child);
         }
         distToNext = Vector3.Distance(transform.position, waypoints[currentWaypoint].position);
-        UI.SetActive(true);
+        movementHandler = FindFirstObjectByType<Movement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!finished && !lost)
+        if (started && !finished && !lost)
         {
             if (progress != null)
                 progress.value = Mathf.Max(currentWaypoint - 1, 0) / (float)waypoints.Count;
@@ -73,22 +86,58 @@ public class FollowWaypoint : MonoBehaviour
 
     void ManageUI()
     {
-        if (finished)
+        if (!started && startScene != null)
         {
+            startScene.SetActive(true);
+            movementHandler.toggleLock(true);
+        } 
+        else if (finished)
+        {
+            startScene.SetActive(false);
             UI.SetActive(false);
             winScene.SetActive(true);
-        }
-        if (lost)
+            movementHandler.toggleLock(true);
+        } 
+        else if (lost)
         {
+            startScene.SetActive(false);
             UI.SetActive(false);
             loseScene.SetActive(true);
+            movementHandler.toggleLock(true);
+        }
+        else
+        {
+            startScene.SetActive(false);
+            UI.SetActive(true);
+            movementHandler.toggleLock(false);
+        }
+        if (finishByScore)
+        {
+            scoreDisp.text = score + "/" + goal;
         }
     }
 
     public void ActiveLoss()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
         lost = true;
+    }
+
+    public void StartLevel()
+    {
+        started = true;
+    }
+
+    public void IncreaseScore()
+    {
+        score++;
+        if (score >= goal) finished = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 10)
+        {
+            Debug.Log("HIT BY ENEMY");
+        }
     }
 }

@@ -19,6 +19,7 @@ public class Weapon : MonoBehaviour
     Recoil Recoil_Script;
 
     LineRenderer lr;
+    private Movement movement;
     
 
     // Start is called before the first frame update
@@ -30,32 +31,35 @@ public class Weapon : MonoBehaviour
 
         Recoil_Script = transform.GetComponent<Recoil>();
         lr = GetComponent<LineRenderer>();
+        movement = FindFirstObjectByType<Movement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && currentCooldown <= 0)
+        if (!movement.isLocked())
         {
-            Shoot();
-        }
-
-
-        if (currentCooldown > 0)
-        {
-            currentCooldown -= Time.deltaTime;
-        }
-
-
-        if (properties.thrown)
-        {
-            List<Vector3> simulation = SimulateArc();
-            lr.positionCount = simulation.Count;
-            for (int a = 0; a < lr.positionCount; a++)
+            if (Input.GetMouseButtonDown(0) && currentCooldown <= 0)
             {
-                lr.SetPosition(a, simulation[a]);
+                Shoot();
             }
-            //lr.SetPositions(SimulateArc().ToArray());
+
+            if (currentCooldown > 0)
+            {
+                currentCooldown -= Time.deltaTime;
+            }
+
+
+            if (properties.thrown)
+            {
+                List<Vector3> simulation = SimulateArc();
+                lr.positionCount = simulation.Count;
+                for (int a = 0; a < lr.positionCount; a++)
+                {
+                    lr.SetPosition(a, simulation[a]);
+                }
+                //lr.SetPositions(SimulateArc().ToArray());
+            }
         }
     }
 

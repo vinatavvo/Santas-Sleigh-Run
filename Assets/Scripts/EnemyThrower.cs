@@ -18,6 +18,7 @@ public class EnemyThrower : MonoBehaviour
 
     private float lastThrowTime;
     private GameObject toThrow;
+    bool dead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,7 @@ public class EnemyThrower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.position) < 450)
+        if (Vector3.Distance(transform.position, player.position) < 450 && !dead)
         {
             if(!AnimatorIsPlaying("Throw Snowball") && Time.time - lastThrowTime >= cooldown)
             {
@@ -38,10 +39,21 @@ public class EnemyThrower : MonoBehaviour
                 Invoke("throwObject", 1.45f);
             }
         }
+        if (!dead)
+        {
+            Quaternion lookatWP = Quaternion.LookRotation(player.position - transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookatWP, turnSpeed * Time.deltaTime);
+        }
+        else
+        {
+            StartCoroutine(DestroyEnemy());
+        }
+    }
 
-        Quaternion lookatWP = Quaternion.LookRotation(player.position - transform.position);
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookatWP, turnSpeed * Time.deltaTime);
-
+    IEnumerator DestroyEnemy()
+    {
+        yield return new WaitForSeconds(5f);
+        Destroy(gameObject);
     }
 
     bool AnimatorIsPlaying()
@@ -62,6 +74,17 @@ public class EnemyThrower : MonoBehaviour
         rb.isKinematic = false;
         toThrow.transform.LookAt(player);
         Vector3 direction = player.position - toThrow.transform.position;
+        //Makes it throw slightly higher
+        direction.y += 5f;
         rb.AddForce(direction.normalized * launchVelocity, ForceMode.Impulse);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 8)
+        {
+            anim.SetTrigger("DeathTrigger");
+            dead = true;
+        }
     }
 }

@@ -35,6 +35,7 @@ public class Movement : MonoBehaviour
     Vector3 moveDirection;
 
     Rigidbody rb;
+    private bool lockMovement = false;
     
     // Start is called before the first frame update
     void Start()
@@ -54,25 +55,28 @@ public class Movement : MonoBehaviour
     {
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
-        float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sens;
-        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sens;
-
-        yRotation += mouseX;
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-
-        cam.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-        transform.rotation = Quaternion.Euler(0, yRotation, 0);
-
-        //Movement
-        if (walk ||jump)
+        if (!lockMovement)
         {
-            MovementInput();
-            SpeedControl();
-            if (grounded)
-                rb.drag = groundDrag;
-            else
-                rb.drag = 0;
+            float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sens;
+            float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sens;
+
+            yRotation += mouseX;
+            xRotation -= mouseY;
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+            cam.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+            transform.rotation = Quaternion.Euler(0, yRotation, 0);
+
+            //Movement
+            if (walk || jump)
+            {
+                MovementInput();
+                SpeedControl();
+                if (grounded)
+                    rb.drag = groundDrag;
+                else
+                    rb.drag = 0;
+            }
         }
     }
 
@@ -132,5 +136,26 @@ public class Movement : MonoBehaviour
     void ResetJump()
     {
         readyToJump = true;
+    }
+
+    public void toggleLock(bool b)
+    {
+        if (!b)
+        {
+            lockMovement = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            lockMovement = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+    }
+
+    public bool isLocked()
+    {
+        return lockMovement;
     }
 }
