@@ -12,4 +12,6 @@ public class WeaponProperties : ScriptableObject
     public float cooldown = 0.108f;
     public float bloom = 0.11f;
     public float recoilDistance = 0.1f;
+    public bool thrown = false;
+    public float launchVelocity = 700f;
 }

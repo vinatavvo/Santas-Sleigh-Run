@@ -14,9 +14,11 @@ public class Weapon : MonoBehaviour
 
     public GameObject[] projectile;
     public Transform projectileOrigin;
-    public float launchVelocity = 700f;
+    float launchVelocity;
 
     Recoil Recoil_Script;
+
+    LineRenderer lr;
     
 
     // Start is called before the first frame update
@@ -24,8 +26,10 @@ public class Weapon : MonoBehaviour
     {
         curMag = properties.mag;
         curStock = properties.stock;
+        launchVelocity = properties.launchVelocity;
 
         Recoil_Script = transform.GetComponent<Recoil>();
+        lr = GetComponent<LineRenderer>();
     }
 
     // Update is called once per frame
@@ -40,6 +44,18 @@ public class Weapon : MonoBehaviour
         if (currentCooldown > 0)
         {
             currentCooldown -= Time.deltaTime;
+        }
+
+
+        if (properties.thrown)
+        {
+            List<Vector3> simulation = SimulateArc();
+            lr.positionCount = simulation.Count;
+            for (int a = 0; a < lr.positionCount; a++)
+            {
+                lr.SetPosition(a, simulation[a]);
+            }
+            //lr.SetPositions(SimulateArc().ToArray());
         }
     }
 
@@ -88,5 +104,42 @@ public class Weapon : MonoBehaviour
             Transform hit = t_hit.transform;
             //Debug.Log(hit);
         }*/
+    }
+
+    private bool CheckForCollision(Vector3 pos)
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(pos, 1f, 0);
+        return hitColliders.Length > 0;
+    }
+
+    private List<Vector3> SimulateArc()
+    {
+        float maxDuration = 5f;
+        float timeStepInterval = 0.1f;
+        int maxSteps = (int)(maxDuration / timeStepInterval);
+        List<Vector3> lineRendererPoints = new List<Vector3>();
+        //f(t) = (x0 + x*t, y0 + y*t - 9.81t^2/2, z0 + z*t);
+
+        Vector3 directionVector = projectileOrigin.up;
+        Vector3 launchPosition = projectileOrigin.position + projectileOrigin.up;
+
+        lineRendererPoints.Add(launchPosition);
+
+        float vel = launchVelocity / 1f * Time.fixedDeltaTime;
+
+        for (int i = 0; i < maxSteps; ++i)
+        {
+            Vector3 calculatedPosition = launchPosition + directionVector * vel * i * timeStepInterval;
+            calculatedPosition.y += Physics.gravity.y / 2 * Mathf.Pow(i * timeStepInterval, 2);
+
+            lineRendererPoints.Add(calculatedPosition);
+
+            if (CheckForCollision(calculatedPosition))
+            {
+                break;
+            }
+        }
+
+        return lineRendererPoints;
     }
 }
