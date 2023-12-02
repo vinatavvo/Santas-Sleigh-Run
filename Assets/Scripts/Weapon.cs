@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] FollowWaypoint sled;
     [SerializeField] WeaponProperties properties;
     [SerializeField] LayerMask enemy;
 
@@ -20,7 +21,7 @@ public class Weapon : MonoBehaviour
 
     LineRenderer lr;
     private Movement movement;
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -69,6 +70,7 @@ public class Weapon : MonoBehaviour
         {
             return;
         }
+
         if (curStock >= properties.mag)
         {
             curMag = properties.mag;
@@ -92,9 +94,12 @@ public class Weapon : MonoBehaviour
             curMag--;
             currentCooldown = properties.cooldown;
         }
+
         int ind = Mathf.RoundToInt(Random.Range(0, projectile.Length));
         GameObject ball = Instantiate(projectile[ind], projectileOrigin.position, projectileOrigin.rotation);
-        ball.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, launchVelocity, 0));
+        ball.GetComponent<Rigidbody>().velocity = sled.transform.forward * sled.speed;
+        ball.GetComponent<Rigidbody>().AddRelativeForce(new(0, launchVelocity, 0));
+        // ball.GetComponent<Rigidbody>().
         /*RaycastHit t_hit = new RaycastHit();
         Vector3 t_bloom = crosshair.position + crosshair.forward * 1000f;
         t_bloom += UnityEngine.Random.Range(-properties.bloom, properties.bloom) * crosshair.up;
@@ -133,7 +138,7 @@ public class Weapon : MonoBehaviour
 
         for (int i = 0; i < maxSteps; ++i)
         {
-            Vector3 calculatedPosition = launchPosition + directionVector * vel * i * timeStepInterval;
+            Vector3 calculatedPosition = launchPosition + directionVector * (vel * i * timeStepInterval);
             calculatedPosition.y += Physics.gravity.y / 2 * Mathf.Pow(i * timeStepInterval, 2);
 
             lineRendererPoints.Add(calculatedPosition);

@@ -1,22 +1,18 @@
 using System.Collections;
-using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ManageScene : MonoBehaviour
 {
-    public string nextSceneName;
+    [SerializeField] SceneAsset nextScene;
+    [SerializeField] float fadeTime = 1;
 
-    // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Alpha = 1;
+        yield return FadeFromBlack();
     }
 
     public void ResetTheGame()
@@ -26,8 +22,43 @@ public class ManageScene : MonoBehaviour
         //Cursor.visible = false;
     }
 
-    public void NextScene()
+    public void NextScene() => StartCoroutine(FadeToBlack());
+
+    IEnumerator FadeToBlack()
     {
-        SceneManager.LoadScene(nextSceneName);
+        var startTime = Time.time;
+        var endTime = startTime + fadeTime;
+        while (Alpha < 1)
+        {
+            Alpha = (Time.time - startTime) / (endTime - startTime);
+            yield return null;
+        }
+        SceneManager.LoadScene(nextScene.name);
+    }
+
+    IEnumerator FadeFromBlack()
+    {
+        var startTime = Time.time;
+        var endTime = startTime + fadeTime;
+        while (Alpha > 0)
+        {
+            Alpha = 1 - (Time.time - startTime) / (endTime - startTime);
+            yield return null;
+        }
+    }
+
+    /// <summary>
+    /// Property for transparency of black color.
+    /// </summary>
+    float Alpha
+    {
+        get => GetComponent<Image>().color.a;
+        set
+        {
+            var image = GetComponent<Image>();
+            var color = image.color;
+            color.a = value;
+            image.color = color;
+        }
     }
 }

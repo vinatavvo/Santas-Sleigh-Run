@@ -12,8 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 1 - Town.unity
     guid: 17322c1c6179def4882383ab78dca84b
   - enabled: 1
+    path: Assets/Scenes/Level 2 - Santa's Workshop.unity
+    guid: ce4f7cc8b07282b4ab742e65de1efd57
+  - enabled: 1
     path: Assets/Scenes/Level 3 - Forest.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Level 4 - Cave.unity
+    guid: a85a91e461540b54aa14a851f82c6fdb
   - enabled: 1
     path: Assets/Scenes/Level 5 - ending.unity
     guid: 58e3195ca97133844beb906e00cd4939
