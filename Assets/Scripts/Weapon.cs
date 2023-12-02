@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] FollowWaypoint sled;
     [SerializeField] WeaponProperties properties;
     [SerializeField] LayerMask enemy;
 
@@ -19,7 +20,8 @@ public class Weapon : MonoBehaviour
     Recoil Recoil_Script;
 
     LineRenderer lr;
-    
+    private Movement movement;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,32 +32,35 @@ public class Weapon : MonoBehaviour
 
         Recoil_Script = transform.GetComponent<Recoil>();
         lr = GetComponent<LineRenderer>();
+        movement = FindFirstObjectByType<Movement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && currentCooldown <= 0)
+        if (!movement.isLocked())
         {
-            Shoot();
-        }
-
-
-        if (currentCooldown > 0)
-        {
-            currentCooldown -= Time.deltaTime;
-        }
-
-
-        if (properties.thrown)
-        {
-            List<Vector3> simulation = SimulateArc();
-            lr.positionCount = simulation.Count;
-            for (int a = 0; a < lr.positionCount; a++)
+            if (Input.GetMouseButtonDown(0) && currentCooldown <= 0)
             {
-                lr.SetPosition(a, simulation[a]);
+                Shoot();
             }
-            //lr.SetPositions(SimulateArc().ToArray());
+
+            if (currentCooldown > 0)
+            {
+                currentCooldown -= Time.deltaTime;
+            }
+
+
+            if (properties.thrown)
+            {
+                List<Vector3> simulation = SimulateArc();
+                lr.positionCount = simulation.Count;
+                for (int a = 0; a < lr.positionCount; a++)
+                {
+                    lr.SetPosition(a, simulation[a]);
+                }
+                //lr.SetPositions(SimulateArc().ToArray());
+            }
         }
     }
 
@@ -65,6 +70,7 @@ public class Weapon : MonoBehaviour
         {
             return;
         }
+
         if (curStock >= properties.mag)
         {
             curMag = properties.mag;
@@ -88,9 +94,12 @@ public class Weapon : MonoBehaviour
             curMag--;
             currentCooldown = properties.cooldown;
         }
+
         int ind = Mathf.RoundToInt(Random.Range(0, projectile.Length));
         GameObject ball = Instantiate(projectile[ind], projectileOrigin.position, projectileOrigin.rotation);
-        ball.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, launchVelocity, 0));
+        ball.GetComponent<Rigidbody>().velocity = sled.transform.forward * sled.speed;
+        ball.GetComponent<Rigidbody>().AddRelativeForce(new(0, launchVelocity, 0));
+        // ball.GetComponent<Rigidbody>().
         /*RaycastHit t_hit = new RaycastHit();
         Vector3 t_bloom = crosshair.position + crosshair.forward * 1000f;
         t_bloom += UnityEngine.Random.Range(-properties.bloom, properties.bloom) * crosshair.up;
@@ -129,7 +138,7 @@ public class Weapon : MonoBehaviour
 
         for (int i = 0; i < maxSteps; ++i)
         {
-            Vector3 calculatedPosition = launchPosition + directionVector * vel * i * timeStepInterval;
+            Vector3 calculatedPosition = launchPosition + directionVector * (vel * i * timeStepInterval);
             calculatedPosition.y += Physics.gravity.y / 2 * Mathf.Pow(i * timeStepInterval, 2);
 
             lineRendererPoints.Add(calculatedPosition);

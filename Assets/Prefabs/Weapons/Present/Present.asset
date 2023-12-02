@@ -20,4 +20,4 @@ MonoBehaviour:
   bloom: 0.11
   recoilDistance: 0.1
   thrown: 1
-  launchVelocity: 800
+  launchVelocity: 1000
