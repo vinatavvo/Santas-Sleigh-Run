@@ -103,7 +103,6 @@ public class FollowWaypoint : MonoBehaviour
         if (!started && startScene != null)
         {
             startScene.SetActive(true);
-            loseScene.SetActive(false);
             movementHandler.toggleLock(true);
         } // If the user finished, hides all uis but win ui
         else if (finished)
@@ -111,7 +110,6 @@ public class FollowWaypoint : MonoBehaviour
             startScene.SetActive(false);
             UI.SetActive(false);
             winScene.SetActive(true);
-            loseScene.SetActive(false);
             movementHandler.toggleLock(true);
         } // If lost hides all uis but losing ui
         else if (lost)
@@ -125,7 +123,6 @@ public class FollowWaypoint : MonoBehaviour
         {
             startScene.SetActive(false);
             UI.SetActive(true);
-            loseScene.SetActive(false);
             movementHandler.toggleLock(false);
         } //Updates goal score text
         if (finishByScore)

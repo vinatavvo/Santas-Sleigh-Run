@@ -151,7 +151,7 @@ public class Weapon : MonoBehaviour
         for (int i = 0; i < maxSteps; ++i)
         {
             //calculates position based on launch velocity and sled velocity
-            Vector3 calculatedPosition = launchPosition + directionVector * (vel * i * timeStepInterval) + (sled.transform.forward * sled.speed * i);
+            Vector3 calculatedPosition = launchPosition + directionVector * (vel * i * timeStepInterval);
             //Accounts for gravity
             calculatedPosition.y += Physics.gravity.y / 2 * Mathf.Pow(i * timeStepInterval, 2);
 
