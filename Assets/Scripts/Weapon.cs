@@ -104,7 +104,7 @@ public class Weapon : MonoBehaviour
         int ind = Mathf.RoundToInt(Random.Range(0, projectile.Length));
         GameObject ball = Instantiate(projectile[ind], projectileOrigin.position, projectileOrigin.rotation);
         //Sets initial velocity to be same as the sled
-        ball.GetComponent<Rigidbody>().velocity = sled.transform.forward * sled.speed;
+        //ball.GetComponent<Rigidbody>().velocity = sled.transform.forward * sled.speed;
         //Adds force to launch the projectile
         ball.GetComponent<Rigidbody>().AddRelativeForce(new(0, launchVelocity, 0));
         // ball.GetComponent<Rigidbody>().

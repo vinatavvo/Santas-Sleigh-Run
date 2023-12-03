@@ -20,19 +20,21 @@ public class EnemyThrower : MonoBehaviour
     private float lastThrowTime;
     private GameObject toThrow;
     bool dead = false;
+    FollowWaypoint handler;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        handler = player.GetComponent<FollowWaypoint>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (handler.activeGame())
         //If not dead, enemy should look at the player and throw projectiles as long as the player
         //is within 450 units
-        if (Vector3.Distance(transform.position, player.position) < 450 && !dead)
+        if (Vector3.Distance(transform.position, player.position) < 50 && !dead)
         {
             //If animator finishes cycle, throw another snowball and trigger animation
             if(!AnimatorIsPlaying("Throw Snowball") && Time.time - lastThrowTime >= cooldown)
@@ -46,10 +48,22 @@ public class EnemyThrower : MonoBehaviour
         if (!dead)
         {
             Quaternion lookatWP = Quaternion.LookRotation(player.position - transform.position);
+
+            // Ensure rotation only around y-axis
+            lookatWP.eulerAngles = new Vector3(0, lookatWP.eulerAngles.y, 0);
+
+            // Clamp x and z rotation to +- 45 degrees
+            float clampedX = Mathf.Clamp(lookatWP.eulerAngles.x, -45f, 45f);
+            float clampedZ = Mathf.Clamp(lookatWP.eulerAngles.z, -45f, 45f);
+
+            lookatWP.eulerAngles = new Vector3(clampedX, lookatWP.eulerAngles.y, clampedZ);
+
             transform.rotation = Quaternion.Slerp(transform.rotation, lookatWP, turnSpeed * Time.deltaTime);
+
         }
         else
         {
+            gameObject.layer = 0;
             //If enemy dies destroy its object after some time
             StartCoroutine(DestroyEnemy());
         }

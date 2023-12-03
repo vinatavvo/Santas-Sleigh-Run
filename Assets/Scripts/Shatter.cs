@@ -22,9 +22,8 @@ public class Shatter : MonoBehaviour
     //For ornament, if hits a collider, create shatter particles to look like ornament breaks
     private void OnCollisionEnter(Collision collision)
     {
-        if (!collided)
+        if (!collided && collision.gameObject.layer != 7)
         {
-            Debug.Log(collision.gameObject.CompareTag("Player"));
             collided = true;
             Instantiate(shatterParticles, transform.position, transform.rotation);
             Destroy(gameObject);

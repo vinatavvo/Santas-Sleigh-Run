@@ -32,18 +32,26 @@ public class FollowWaypoint : MonoBehaviour
     public TMP_Text scoreDisp;
     private float score = 0f;
 
+    [Header("Time Win Setting")]
+    public bool loseByTime = false;
+    public float limitSecs = 150f;
+    public TMP_Text timeDisp;
+    float time;
+
     List<Transform> waypoints = new List<Transform>();
     bool finished = false;
     bool lost = false;
     float distToNext;
     Movement movementHandler;
 
-
+    float slowedSpeed = 0.5f;
+    float slowCooldown = 0f;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        time = limitSecs;
         //Gets all the different points in the track and stores them as waypoints
         foreach (Transform child in track.transform)
         {
@@ -57,9 +65,20 @@ public class FollowWaypoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (slowCooldown > 0)
+        {
+            slowCooldown -= Time.deltaTime;
+        }
+
         //If playing
         if (started && !finished && !lost)
         {
+            time -= Time.deltaTime;
+            if (loseByTime && time < 0)
+            {
+                lost = true;
+                return;
+            }
             //If ui has a progress bar, this updates the current progress
             if (progress != null)
                 progress.value = Mathf.Max(currentWaypoint - 1, 0) / (float)waypoints.Count;
@@ -74,7 +93,7 @@ public class FollowWaypoint : MonoBehaviour
             if (currentWaypoint >= waypoints.Count)
                 if (loop) currentWaypoint = 0;
                 else finished = true;
-
+            if (finished) return;
             //transform.LookAt(waypoints[currentWaypoint].transform);
 
             //Calculates the transformation to rotate the transform to face the next waypoint
@@ -83,7 +102,7 @@ public class FollowWaypoint : MonoBehaviour
             //Rotates to look at the next waypoint based on the rotation speed
             transform.rotation = Quaternion.Slerp(transform.rotation, lookatWP, rotSpeed * Time.deltaTime);
             //Moves the sled forwards at the defined speed
-            transform.Translate(0, 0, speed * Time.deltaTime);
+            transform.Translate(0, 0, speed * Time.deltaTime * (slowCooldown > 0 ? slowedSpeed : 1f));
 
             //For final level, if defined allows for horizontal movement
             if (sideMovement != 0 && sled != null)
@@ -129,6 +148,20 @@ public class FollowWaypoint : MonoBehaviour
         {
             scoreDisp.text = score + "/" + goal;
         }
+        if (loseByTime)
+        {
+            timeDisp.text = FormatTime(time);
+        }
+    }
+
+    string FormatTime(float timeInSeconds)
+    {
+        int minutes = Mathf.FloorToInt(timeInSeconds / 60);
+        int seconds = Mathf.FloorToInt(timeInSeconds % 60);
+
+        // Use string interpolation to format the minutes and seconds
+        string timeString = $"{minutes:00}:{seconds:00}";
+        return timeString;
     }
 
     //Method to declare the level lost
@@ -144,6 +177,11 @@ public class FollowWaypoint : MonoBehaviour
         started = true;
     }
 
+    public bool activeGame()
+    {
+        return UI.activeSelf ;
+    }
+
     //Method to increate the score and mark level as finished if reach defined goal
     public void IncreaseScore()
     {
@@ -156,7 +194,7 @@ public class FollowWaypoint : MonoBehaviour
     {
         if (other.gameObject.layer == 10)
         {
-            Debug.Log("HIT BY ENEMY");
+            slowCooldown = 1f;
         }
     }
 }

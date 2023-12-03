@@ -19,3 +19,5 @@ MonoBehaviour:
   cooldown: 0.33
   bloom: 0.11
   recoilDistance: 0.1
+  thrown: 0
+  launchVelocity: 2000
