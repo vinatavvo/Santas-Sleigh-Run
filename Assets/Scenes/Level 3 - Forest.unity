@@ -228,6 +228,208 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4387490}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &13498563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 13498564}
+  m_Layer: 0
+  m_Name: Enemies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &13498564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13498563}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 364.94034, y: 98.00498, z: 530.9745}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &35343213
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 341.88678
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 87.68708
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 516.36505
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5806511
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.2037145
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7876143
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.031756617
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 10.752
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 109.236
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 21.356
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (27)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+--- !u!1001 &50170077
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 643.1334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 57.417084
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 779.27106
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (13)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+--- !u!1001 &61025807
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 718.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 53.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 866.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5786807
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.81555426
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 109.284
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
 --- !u!1 &120191545
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,6 +535,177 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120191545}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &128666731
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 369.73868
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 71.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 552.6721
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.66341645
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7482504
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 96.878
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (25)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+--- !u!1001 &207136593
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 409.97345
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 64.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 556.80365
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (23)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+--- !u!1001 &282826103
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 632.3518
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 55.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 756.29767
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (16)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
 --- !u!1 &338419293
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,6 +916,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 363328620}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &405087900
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 471.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 57.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 661.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5004172
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8657844
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 119.945
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (29)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
 --- !u!1 &454365368
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +1078,120 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454365368}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &514433587
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 335.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 105.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 497.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8823882
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.27400696
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.36673647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.1087005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 34.284
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 45.333
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.634
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (28)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+--- !u!1001 &546179665
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 451.02438
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 59.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 624.122
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (19)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
 --- !u!1 &561852240
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,6 +1297,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561852240}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &586389018
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 700.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 55.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 854.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.43602076
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8999367
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 128.299
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,6 +1553,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744474536}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &816179102
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 642.2942
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 58.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 807.3826
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.26269847
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.964878
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 149.539
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (11)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
 --- !u!1 &894254139
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,6 +1702,462 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &906726896
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 363.4852
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 76.871254
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 510.78992
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.98974025
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.09507145
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.010198228
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.10616853
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 10.974
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -12.245
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (26)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+--- !u!1001 &979948275
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 595.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 53.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 749.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6390659
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.769152
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 100.556
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (14)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+--- !u!1001 &994250626
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 427.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 62.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 624.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7807135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.62488925
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 77.348
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (21)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+--- !u!1001 &1019708453
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 743.4589
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 52.370087
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 886.2888
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.47200346
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.88159674
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 123.671
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+--- !u!1001 &1029581607
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 728.5953
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 51.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 881.5687
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5870128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8095777
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 108.109
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+--- !u!1001 &1079495103
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 578.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 52.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 737.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.60153764
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7988445
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 106.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (15)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+--- !u!1001 &1285968947
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 654.3164
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 58.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 818.16895
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.39381263
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.91919076
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 133.616
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+--- !u!1001 &1312937432
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 627.8187
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 59.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 798.8636
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5653418
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.82485676
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 111.148
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (12)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
 --- !u!1 &1379780011
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,6 +2368,120 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383204741}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1408071683
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 508.28412
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 53.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 658.64557
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (17)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+--- !u!1001 &1413533335
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 395.64087
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 67.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 549.43085
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (24)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
 --- !u!1 &1467051086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,6 +2529,63 @@ Transform:
   - {fileID: 1966772864}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1597629748
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 794.1178
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 56.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 912.11743
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
 --- !u!1 &1626247749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,6 +2691,120 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1626247749}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1630868179
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 769.4092
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 54.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 888.2657
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+--- !u!1001 &1658611849
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 693.48505
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 59.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 826.2841
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
 --- !u!1 &1716265994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,6 +2910,120 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716265994}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1725353767
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 407.6168
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 64.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 574.44147
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (22)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+--- !u!1001 &1764055563
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 439.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 61.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 639.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6243734
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7811261
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 102.728
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (20)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
 --- !u!1 &1851691261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1616,6 +3129,120 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851691261}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1876463053
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 771.1823
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 54.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 918.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.41627923
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0050260136
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9091567
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.01097685
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.904
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 130.788
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -1.047
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+--- !u!1001 &1886475920
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 523.32275
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 52.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 669.211
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (18)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
 --- !u!1 &1915022513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,6 +3348,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1915022513}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1956953595
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 788.5109
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 56.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 902.0135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
 --- !u!1 &1966772863
 GameObject:
   m_ObjectHideFlags: 0
@@ -1826,6 +3510,177 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1966772863}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1986817305
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 837.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 48.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 969.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.35578668
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.09445982
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.92976665
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.005219621
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 3.297
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 138.419
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 10.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+--- !u!1001 &2091099993
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 833.40564
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 54.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 939.44446
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+--- !u!1001 &2103114331
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 701.4787
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 57.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 833.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077695181527025096, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939995494674130967, guid: 147c33d1d1a68f844acc242185831240, type: 3}
+      propertyPath: m_Name
+      value: EnemySnowman (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147c33d1d1a68f844acc242185831240, type: 3}
 --- !u!1 &2111259912
 GameObject:
   m_ObjectHideFlags: 0
@@ -2101,3 +3956,36 @@ SceneRoots:
   - {fileID: 894254142}
   - {fileID: 103537065620855899}
   - {fileID: 1467051087}
+  - {fileID: 13498564}
+  - {fileID: 1630868179}
+  - {fileID: 1956953595}
+  - {fileID: 1597629748}
+  - {fileID: 2091099993}
+  - {fileID: 1986817305}
+  - {fileID: 1876463053}
+  - {fileID: 1019708453}
+  - {fileID: 1029581607}
+  - {fileID: 61025807}
+  - {fileID: 2103114331}
+  - {fileID: 1658611849}
+  - {fileID: 586389018}
+  - {fileID: 1285968947}
+  - {fileID: 816179102}
+  - {fileID: 1312937432}
+  - {fileID: 50170077}
+  - {fileID: 979948275}
+  - {fileID: 1079495103}
+  - {fileID: 282826103}
+  - {fileID: 1408071683}
+  - {fileID: 1886475920}
+  - {fileID: 546179665}
+  - {fileID: 1764055563}
+  - {fileID: 994250626}
+  - {fileID: 1725353767}
+  - {fileID: 207136593}
+  - {fileID: 1413533335}
+  - {fileID: 128666731}
+  - {fileID: 906726896}
+  - {fileID: 35343213}
+  - {fileID: 514433587}
+  - {fileID: 405087900}
