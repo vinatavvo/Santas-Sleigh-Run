@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class EnemyThrower : MonoBehaviour
 {
+    //Script to handle an enemy of thrower class
     [SerializeField] Transform player;
     [SerializeField] float cooldown = 5f;
     [SerializeField] float turnSpeed = 30f;
@@ -29,8 +30,11 @@ public class EnemyThrower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //If not dead, enemy should look at the player and throw projectiles as long as the player
+        //is within 450 units
         if (Vector3.Distance(transform.position, player.position) < 450 && !dead)
         {
+            //If animator finishes cycle, throw another snowball and trigger animation
             if(!AnimatorIsPlaying("Throw Snowball") && Time.time - lastThrowTime >= cooldown)
             {
                 anim.SetTrigger("ThrowTrigger");
@@ -46,6 +50,7 @@ public class EnemyThrower : MonoBehaviour
         }
         else
         {
+            //If enemy dies destroy its object after some time
             StartCoroutine(DestroyEnemy());
         }
     }
@@ -56,17 +61,19 @@ public class EnemyThrower : MonoBehaviour
         Destroy(gameObject);
     }
 
+    //Check if the animator is playing an animation
     bool AnimatorIsPlaying()
     {
         return anim.GetCurrentAnimatorStateInfo(0).length >
                anim.GetCurrentAnimatorStateInfo(0).normalizedTime;
     }
-
+    //Checks if the current animation is the given name
     bool AnimatorIsPlaying(string stateName)
     {
         return AnimatorIsPlaying() && anim.GetCurrentAnimatorStateInfo(0).IsName(stateName);
     }
 
+    //Throws object at player
     void throwObject()
     {
         toThrow.transform.parent = null;
@@ -79,6 +86,8 @@ public class EnemyThrower : MonoBehaviour
         rb.AddForce(direction.normalized * launchVelocity, ForceMode.Impulse);
     }
 
+
+    //If hit by a projectile, from player, declare enemy dead
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 8)

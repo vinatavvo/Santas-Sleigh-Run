@@ -19,6 +19,7 @@ public class Shatter : MonoBehaviour
         
     }
 
+    //For ornament, if hits a collider, create shatter particles to look like ornament breaks
     private void OnCollisionEnter(Collision collision)
     {
         if (!collided)

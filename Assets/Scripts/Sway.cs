@@ -22,6 +22,7 @@ public class Sway : MonoBehaviour
         UpdateSway();
     }
 
+    //Creates weapon sway based on movement of mouse to make visuals less static
     private void UpdateSway()
     {
         float t_x_mouse = Input.GetAxis("Mouse X");

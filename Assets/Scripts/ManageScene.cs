@@ -17,6 +17,7 @@ public class ManageScene : MonoBehaviour
 
     public void ResetTheGame()
     {
+        //Resets the scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
@@ -24,6 +25,7 @@ public class ManageScene : MonoBehaviour
 
     public void NextScene() => StartCoroutine(FadeToBlack());
 
+    // Coroutine to fade out the scene
     IEnumerator FadeToBlack()
     {
         var startTime = Time.time;
@@ -36,6 +38,7 @@ public class ManageScene : MonoBehaviour
         SceneManager.LoadScene(nextScene.name);
     }
 
+    //Coroutine to fade in the scene
     IEnumerator FadeFromBlack()
     {
         var startTime = Time.time;

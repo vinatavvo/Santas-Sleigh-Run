@@ -26,6 +26,7 @@ public class Weapon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Loads properties of weapon
         curMag = properties.mag;
         curStock = properties.stock;
         launchVelocity = properties.launchVelocity;
@@ -38,19 +39,22 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Checks if allowed to shoot
         if (!movement.isLocked())
         {
+            //If left click and cooldown is up, allow player to shoot
             if (Input.GetMouseButtonDown(0) && currentCooldown <= 0)
             {
                 Shoot();
             }
 
+            //Keep track of cooldown to prevent spam click
             if (currentCooldown > 0)
             {
                 currentCooldown -= Time.deltaTime;
             }
 
-
+            //If thrown weapon, generate a predictive line to show where the projectile will land
             if (properties.thrown)
             {
                 List<Vector3> simulation = SimulateArc();
@@ -66,6 +70,7 @@ public class Weapon : MonoBehaviour
 
     void Reload()
     {
+        //Not used
         if (curStock == 0)
         {
             return;
@@ -92,12 +97,15 @@ public class Weapon : MonoBehaviour
         else
         {
             curMag--;
+            //Starts cooldown
             currentCooldown = properties.cooldown;
         }
-
+        //Randomizes if multiple projectiles are provided
         int ind = Mathf.RoundToInt(Random.Range(0, projectile.Length));
         GameObject ball = Instantiate(projectile[ind], projectileOrigin.position, projectileOrigin.rotation);
+        //Sets initial velocity to be same as the sled
         ball.GetComponent<Rigidbody>().velocity = sled.transform.forward * sled.speed;
+        //Adds force to launch the projectile
         ball.GetComponent<Rigidbody>().AddRelativeForce(new(0, launchVelocity, 0));
         // ball.GetComponent<Rigidbody>().
         /*RaycastHit t_hit = new RaycastHit();
@@ -115,12 +123,15 @@ public class Weapon : MonoBehaviour
         }*/
     }
 
+    //Method to check if the prediction line is hitting any colliders
     private bool CheckForCollision(Vector3 pos)
     {
         Collider[] hitColliders = Physics.OverlapSphere(pos, 1f, 0);
         return hitColliders.Length > 0;
     }
 
+
+    //Method to simulate the path of the projectile
     private List<Vector3> SimulateArc()
     {
         float maxDuration = 5f;
@@ -131,18 +142,21 @@ public class Weapon : MonoBehaviour
 
         Vector3 directionVector = projectileOrigin.up;
         Vector3 launchPosition = projectileOrigin.position + projectileOrigin.up;
-
+        //Adds initial position
         lineRendererPoints.Add(launchPosition);
 
         float vel = launchVelocity / 1f * Time.fixedDeltaTime;
 
+        //For each step, calculate projectiles position
         for (int i = 0; i < maxSteps; ++i)
         {
-            Vector3 calculatedPosition = launchPosition + directionVector * (vel * i * timeStepInterval);
+            //calculates position based on launch velocity and sled velocity
+            Vector3 calculatedPosition = launchPosition + directionVector * (vel * i * timeStepInterval) + (sled.transform.forward * sled.speed * i);
+            //Accounts for gravity
             calculatedPosition.y += Physics.gravity.y / 2 * Mathf.Pow(i * timeStepInterval, 2);
 
             lineRendererPoints.Add(calculatedPosition);
-
+            //If simulated point collides, stop simulating
             if (CheckForCollision(calculatedPosition))
             {
                 break;

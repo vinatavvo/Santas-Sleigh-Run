@@ -40,9 +40,11 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Locks concert
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
+        //keep player from toppling
         if (walk || jump)
         {
             rb = GetComponent<Rigidbody>();
@@ -53,10 +55,13 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Checks if the player is on the ground
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
+        //Checks if allow to move
         if (!lockMovement)
         {
+            //Handles camera movement
             float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sens;
             float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sens;
 
@@ -91,10 +96,11 @@ public class Movement : MonoBehaviour
         {
             horizontalInput = Input.GetAxisRaw("Horizontal");
             verticalInput = Input.GetAxisRaw("Vertical");
-
+            //Checks if sprinting
             sprinting = Input.GetKey(sprintKey);
         }
 
+        //Controls if player is allowed to jump
         if (Input.GetKey(jumpKey) && readyToJump && grounded && jump)
         {
             readyToJump = false;
@@ -106,6 +112,7 @@ public class Movement : MonoBehaviour
 
     }
 
+    //Moves player forwards backwars left right
     void MovePlayer()
     {
         float speed = sprinting ? sprintSpeed : moveSpeed;
@@ -128,6 +135,7 @@ public class Movement : MonoBehaviour
 
     void Jump()
     {
+        //Maintains velocity for player but adds impulse for jumping movement
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
@@ -138,6 +146,7 @@ public class Movement : MonoBehaviour
         readyToJump = true;
     }
 
+    //Toggle cursor lock
     public void toggleLock(bool b)
     {
         if (!b)

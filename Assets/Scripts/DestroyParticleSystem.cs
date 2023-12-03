@@ -6,6 +6,8 @@ public class DestroyParticleSystem : MonoBehaviour
 {
     private ParticleSystem pSystem;
 
+    //For explosion particles, deletes the particles after they finish
+    //Used for ornament
     private void Start()
     {
         pSystem = GetComponent<ParticleSystem>();

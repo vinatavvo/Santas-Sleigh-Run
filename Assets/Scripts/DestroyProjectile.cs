@@ -20,6 +20,7 @@ public class DestroyProjectile : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    //Destroys the object if it hits any object that isnt the player
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.layer != 7)

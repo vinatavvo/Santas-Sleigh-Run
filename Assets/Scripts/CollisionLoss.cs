@@ -20,6 +20,7 @@ public class CollisionLoss : MonoBehaviour
         
     }
 
+    //Used for obstacles, will declare level lost if hit
     private void OnTriggerEnter(Collider other)
     {
         if (((1 << other.gameObject.layer) & loseIfHit) != 0)

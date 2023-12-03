@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Weapon", menuName = "Weapon")]
 public class WeaponProperties : ScriptableObject
 {
+    //Defines basic properties for a weapon, used in Weapon.cs
     public bool isKnife;
     public float mag = 12f;
     public float stock = 36f;

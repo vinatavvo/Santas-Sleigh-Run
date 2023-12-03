@@ -22,6 +22,8 @@ public class HouseHandler : MonoBehaviour
         
     }
 
+    // If hit by a projectile, update house to show active props (presents and happy civilians)
+    // Also change window material to have the house lights be on
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 8 && !activated)
