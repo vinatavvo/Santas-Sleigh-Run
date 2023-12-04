@@ -23343,7 +23343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7827176baf7dd714880c175e275d4519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: {fileID: 102900000, guid: 58e3195ca97133844beb906e00cd4939, type: 3}
+  nextScene: Level 5 - ending
   fadeTime: 1
 --- !u!224 &1494189228
 RectTransform:

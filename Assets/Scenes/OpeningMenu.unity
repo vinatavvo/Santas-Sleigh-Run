@@ -675,7 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7827176baf7dd714880c175e275d4519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: {fileID: 102900000, guid: 17322c1c6179def4882383ab78dca84b, type: 3}
+  nextScene: Level 1 - Town
   fadeTime: 1
 --- !u!114 &848394235
 MonoBehaviour:

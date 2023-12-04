@@ -1,12 +1,11 @@
 using System.Collections;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ManageScene : MonoBehaviour
 {
-    [SerializeField] SceneAsset nextScene;
+    [SerializeField] string nextScene;
     [SerializeField] float fadeTime = 1;
 
     IEnumerator Start()
@@ -35,7 +34,8 @@ public class ManageScene : MonoBehaviour
             Alpha = (Time.time - startTime) / (endTime - startTime);
             yield return null;
         }
-        SceneManager.LoadScene(nextScene.name);
+
+        SceneManager.LoadScene(nextScene);
     }
 
     //Coroutine to fade in the scene

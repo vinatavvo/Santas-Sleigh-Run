@@ -5936,8 +5936,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4515491264577641991, guid: 44e39b643f32c5546b9a0f964b1bb869, type: 3}
       propertyPath: nextScene
-      value: 
-      objectReference: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+      value: Level 3 - Forest
+      objectReference: {fileID: 0}
     - target: {fileID: 8505324295850348394, guid: 44e39b643f32c5546b9a0f964b1bb869, type: 3}
       propertyPath: m_Pivot.x
       value: 0
