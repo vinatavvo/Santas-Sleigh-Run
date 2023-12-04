@@ -61,6 +61,9 @@ MonoBehaviour:
   finishByScore: 1
   goal: 20
   scoreDisp: {fileID: 0}
+  loseByTime: 0
+  limitSecs: 150
+  timeDisp: {fileID: 0}
 --- !u!65 &3437803752784186061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -159,6 +162,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2876392472634824586}
     m_Modifications:
+    - target: {fileID: 1654392206861314742, guid: f23dca057531d274399c076b14a1e483, type: 3}
+      propertyPath: sled
+      value: 
+      objectReference: {fileID: 8713481297915710836}
     - target: {fileID: 2607863002899711431, guid: f23dca057531d274399c076b14a1e483, type: 3}
       propertyPath: m_Layer
       value: 7

@@ -24,7 +24,7 @@ public class FollowWaypoint : MonoBehaviour
     public GameObject winScene;
     public GameObject UI;
     public GameObject loseScene;
-    bool started = false;
+    public bool started = false;
 
     [Header("Score Win Settings")]
     public bool finishByScore = false;
