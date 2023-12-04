@@ -8478,6 +8478,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6064712678463536782, guid: 7881514e0ee96cf40a142dbe0ed87be7, type: 3}
+      propertyPath: sled
+      value: 
+      objectReference: {fileID: 8713481298170575460}
+    - target: {fileID: 6064712678463536782, guid: 7881514e0ee96cf40a142dbe0ed87be7, type: 3}
       propertyPath: crosshair
       value: 
       objectReference: {fileID: 6675473918349981582}
@@ -10072,7 +10076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   track: {fileID: 1467051086}
-  speed: 15
+  speed: 10
   rotSpeed: 5
   loop: 0
   sideMovement: 0
@@ -10083,6 +10087,7 @@ MonoBehaviour:
   winScene: {fileID: 933178465}
   UI: {fileID: 8347762577272514501}
   loseScene: {fileID: 513736588}
+  started: 0
   finishByScore: 0
   goal: 20
   scoreDisp: {fileID: 0}
