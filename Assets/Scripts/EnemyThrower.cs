@@ -106,6 +106,7 @@ public class EnemyThrower : MonoBehaviour
     {
         if (other.gameObject.layer == 8)
         {
+            gameObject.layer = 0;
             anim.SetTrigger("DeathTrigger");
             dead = true;
         }
