@@ -6,34 +6,30 @@ using TMPro;
 
 public class FollowWaypoint : MonoBehaviour
 {
-    [Header("Track Settings")]
-    public GameObject track;
+    [Header("Track Settings")] public GameObject track;
     int currentWaypoint = 0;
 
-    [Header("Traversal Settings")]
-    public float speed = 10f;
+    [Header("Traversal Settings")] public float speed = 10f;
     public float rotSpeed = 10f;
     public bool loop = false;
     public float sideMovement = 0f;
     public float maxHorizontalDisplacement = 10f;
     public Transform sled;
 
-    [Header("Gameplay Settings")]
-    public Slider progress;
+    [Header("Gameplay Settings")] public Slider progress;
     public GameObject startScene;
     public GameObject winScene;
     public GameObject UI;
     public GameObject loseScene;
     public bool started = false;
 
-    [Header("Score Win Settings")]
-    public bool finishByScore = false;
+    [Header("Score Win Settings")] public bool finishByScore = false;
     public float goal = 20f;
     public TMP_Text scoreDisp;
+    [SerializeField] AudioSource scoreIncreasedAudioSource;
     private float score = 0f;
 
-    [Header("Time Win Setting")]
-    public bool loseByTime = false;
+    [Header("Time Win Setting")] public bool loseByTime = false;
     public float limitSecs = 150f;
     public TMP_Text timeDisp;
     float time;
@@ -57,6 +53,7 @@ public class FollowWaypoint : MonoBehaviour
         {
             waypoints.Add(child);
         }
+
         distToNext = Vector3.Distance(transform.position, waypoints[currentWaypoint].position);
         //Saves reference to Movement Hanlder, which controls mouse movement
         movementHandler = FindFirstObjectByType<Movement>();
@@ -79,6 +76,7 @@ public class FollowWaypoint : MonoBehaviour
                 lost = true;
                 return;
             }
+
             //If ui has a progress bar, this updates the current progress
             if (progress != null)
                 progress.value = Mathf.Max(currentWaypoint - 1, 0) / (float)waypoints.Count;
@@ -88,6 +86,7 @@ public class FollowWaypoint : MonoBehaviour
                 distToNext = Vector3.Distance(transform.position, waypoints[currentWaypoint].position);
                 currentWaypoint++;
             }
+
             //If loop is set to true, it will head back to the first waypoint
             //Otherwise, getting to the final waypoint marks it as finished and the win ui will be displayed
             if (currentWaypoint >= waypoints.Count)
@@ -97,7 +96,8 @@ public class FollowWaypoint : MonoBehaviour
             //transform.LookAt(waypoints[currentWaypoint].transform);
 
             //Calculates the transformation to rotate the transform to face the next waypoint
-            Quaternion lookatWP = Quaternion.LookRotation(waypoints[currentWaypoint].position - this.transform.position);
+            Quaternion lookatWP =
+                Quaternion.LookRotation(waypoints[currentWaypoint].position - this.transform.position);
 
             //Rotates to look at the next waypoint based on the rotation speed
             transform.rotation = Quaternion.Slerp(transform.rotation, lookatWP, rotSpeed * Time.deltaTime);
@@ -109,9 +109,13 @@ public class FollowWaypoint : MonoBehaviour
             {
                 float h = sideMovement * Input.GetAxis("Horizontal");
                 //Restricts the horizontal movement
-                sled.localPosition = new Vector3(Mathf.Clamp(sled.localPosition.x + (h * Time.deltaTime), -maxHorizontalDisplacement, maxHorizontalDisplacement), 0, 0);
+                sled.localPosition =
+                    new Vector3(
+                        Mathf.Clamp(sled.localPosition.x + (h * Time.deltaTime), -maxHorizontalDisplacement,
+                            maxHorizontalDisplacement), 0, 0);
             }
         }
+
         //Function to handle which ui is currently displayed and locks movement
         ManageUI();
     }
@@ -144,10 +148,12 @@ public class FollowWaypoint : MonoBehaviour
             UI.SetActive(true);
             movementHandler.toggleLock(false);
         } //Updates goal score text
+
         if (finishByScore)
         {
             scoreDisp.text = score + "/" + goal;
         }
+
         if (loseByTime)
         {
             timeDisp.text = FormatTime(time);
@@ -179,12 +185,14 @@ public class FollowWaypoint : MonoBehaviour
 
     public bool activeGame()
     {
-        return UI.activeSelf ;
+        return UI.activeSelf;
     }
 
     //Method to increate the score and mark level as finished if reach defined goal
     public void IncreaseScore()
     {
+        if (scoreIncreasedAudioSource != null && !scoreIncreasedAudioSource.isPlaying)
+            scoreIncreasedAudioSource.Play();
         score++;
         if (score >= goal) finished = true;
     }
