@@ -50,6 +50,8 @@ public class Movement : MonoBehaviour
             rb = GetComponent<Rigidbody>();
             rb.freezeRotation = true;
         }
+        xRotation = cam.eulerAngles.x;
+        yRotation = cam.eulerAngles.y;
     }
 
     // Update is called once per frame
