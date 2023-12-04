@@ -28,6 +28,11 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] int maxHealth = 10;
 
     /// <summary>
+    /// Audio source for playing on-hit audio.
+    /// </summary>
+    [SerializeField] AudioSource audioSource;
+
+    /// <summary>
     /// The current health of the player.
     /// </summary>
     int health;
@@ -67,6 +72,8 @@ public class PlayerHealth : MonoBehaviour
     {
         // Verify other is an enemy
         if (other.gameObject.layer == 10) health--;
+        else return;
+        audioSource.Play();
         // Handle death
         if (health > 0) return;
         healthUI.SetActive(false);
