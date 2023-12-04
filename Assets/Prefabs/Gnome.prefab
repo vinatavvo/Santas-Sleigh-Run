@@ -225,6 +225,8 @@ MonoBehaviour:
   health: 5
   audioSource: {fileID: 1076358167837474013}
   deathSound: {fileID: 8300000, guid: 29c6a926ae30c0d44bb5a561f2481717, type: 3}
+  damagedMaterial: {fileID: 2100000, guid: 7404e14f92b63974d8e2b9a61a97143c, type: 2}
+  damageIndicatorDuration: 0.1
 --- !u!82 &1076358167837474013
 AudioSource:
   m_ObjectHideFlags: 0

@@ -4754,6 +4754,7 @@ MonoBehaviour:
   healthDisp: {fileID: 1018908186}
   maxHealth: 10
   audioSource: {fileID: 1293787927}
+  enemiesParent: {fileID: 1625395149}
 --- !u!82 &1293787924 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7822480613808817506, guid: c7d76cba7ec36394386d78f1310d0d39, type: 3}

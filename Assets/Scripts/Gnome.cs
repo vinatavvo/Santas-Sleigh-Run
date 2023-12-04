@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -77,6 +78,16 @@ public class Gnome : MonoBehaviour
     /// Sound to play when the gnome dies.
     /// </summary>
     [SerializeField] AudioClip deathSound;
+
+    /// <summary>
+    /// Material to show when being damaged.
+    /// </summary>
+    [SerializeField] Material damagedMaterial;
+
+    /// <summary>
+    /// How many seconds to show the damageMaterial when taking damage.
+    /// </summary>
+    [SerializeField] float damageIndicatorDuration = 0.2f;
 
     /// <summary>
     /// The starting Y position of the gnome and the present lid.
@@ -205,6 +216,7 @@ public class Gnome : MonoBehaviour
         // Was this gnome hit by a projectile?
         if (!up || other.gameObject.layer != 8) return;
         health--;
+        StartCoroutine(TakeDamage());
         Destroy(other.gameObject);
 
         // Handle death by playing Down animation
@@ -215,6 +227,18 @@ public class Gnome : MonoBehaviour
             player.IncreaseScore();
             StartCoroutine(Down());
         }
+    }
+
+    /// <summary>
+    /// Shows the damage material for a brief moment when taking damage.
+    /// </summary>
+    IEnumerator TakeDamage()
+    {
+        var meshRenderers = GetComponentsInChildren<MeshRenderer>();
+        var originalMaterials = meshRenderers.Select(mr => mr.material).ToArray();
+        foreach (var mr in meshRenderers) mr.material = damagedMaterial;
+        yield return new WaitForSeconds(damageIndicatorDuration);
+        for (var i = 0; i < meshRenderers.Length; ++i) meshRenderers[i].material = originalMaterials[i];
     }
 
     /// <summary>

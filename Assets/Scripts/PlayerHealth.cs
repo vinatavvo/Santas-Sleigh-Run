@@ -33,6 +33,11 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] AudioSource audioSource;
 
     /// <summary>
+    /// Allows this script to disable the enemies on loss.
+    /// </summary>
+    [SerializeField] GameObject enemiesParent;
+
+    /// <summary>
     /// The current health of the player.
     /// </summary>
     int health;
@@ -78,5 +83,6 @@ public class PlayerHealth : MonoBehaviour
         if (health > 0) return;
         healthUI.SetActive(false);
         player.ActiveLoss();
+        enemiesParent.SetActive(false);
     }
 }
