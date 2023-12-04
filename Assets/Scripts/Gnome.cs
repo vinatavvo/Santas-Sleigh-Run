@@ -69,6 +69,16 @@ public class Gnome : MonoBehaviour
     [SerializeField] int health = 5;
 
     /// <summary>
+    /// Reference to the audio source.
+    /// </summary>
+    [SerializeField] AudioSource audioSource;
+
+    /// <summary>
+    /// Sound to play when the gnome dies.
+    /// </summary>
+    [SerializeField] AudioClip deathSound;
+
+    /// <summary>
     /// The starting Y position of the gnome and the present lid.
     /// </summary>
     float startY, lidStartY;
@@ -153,6 +163,7 @@ public class Gnome : MonoBehaviour
     {
         if (animating) yield break;
         animating = true;
+        audioSource.Play();
         var startTime = Time.time;
         var endTime = startTime + popUpTime;
         while (Time.time < endTime)
@@ -199,6 +210,8 @@ public class Gnome : MonoBehaviour
         // Handle death by playing Down animation
         if (health <= 0)
         {
+            audioSource.clip = deathSound;
+            audioSource.Play();
             player.IncreaseScore();
             StartCoroutine(Down());
         }

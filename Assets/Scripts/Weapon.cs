@@ -7,6 +7,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] FollowWaypoint sled;
     [SerializeField] WeaponProperties properties;
     [SerializeField] LayerMask enemy;
+    [SerializeField] AudioSource audioSource;
 
     private float curMag;
     private float curStock;
@@ -100,6 +101,8 @@ public class Weapon : MonoBehaviour
             //Starts cooldown
             currentCooldown = properties.cooldown;
         }
+
+        audioSource.Play();
         //Randomizes if multiple projectiles are provided
         int ind = Mathf.RoundToInt(Random.Range(0, projectile.Length));
         GameObject ball = Instantiate(projectile[ind], projectileOrigin.position, projectileOrigin.rotation);
